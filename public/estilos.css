@@ -1,0 +1,10 @@
+.contenedorVideo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: black 50px solid;
+    margin-left: 50px;
+}
+
+
+

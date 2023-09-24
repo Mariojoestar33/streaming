@@ -4,14 +4,63 @@
     <meta charset="UTF-8">
     <title>Videos en vivo</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favicon.png">
 </head>
     <body>
         <header>
             <h1>Videos en vivo</h1>
+            <span class="centrado">Video 1</span>
         </header>
         <div class="containerVideos">
             <div id='wowza_player'></div>
             <script id='player_embed' src='//player.video.wowza.com/hosted/bcjzlgmb/wowza.js' type='text/javascript'></script>            
         </div>
+        <div>
+            <span class="centrado">Video 2</span>
+        </div>
+        <script src="https://jwpsrv.com/library/FfMxTl3oEeSEiiIACxmInQ.js"></script>   
+       <div id="aRzklaXf">Loading the player...</div>
+       <script type="text/javascript">
+       var playerInstance = jwplayer("aRzklaXf");
+       playerInstance.setup({
+        "file": "https://cdn3.wowza.com/2/eGJBa3dOMnpNVFlH/b0RqZnBm/hls/lkpgjfjj/playlist.m3u8",
+        "width":"1510",
+        "height":"720",
+        stretching: "bestfit",
+        "image": "#",
+        "mediaid": "player",
+        "mute": false,
+        "autostart": false,
+            "cast": {
+                "appid": "player",
+                "logo": "https://i.ibb.co/Tgk2YrC/Logo.png",
+            },
+       });
+    </script>
+
+    <div>
+        <span class="centrado">Video 3</span>
+    </div>
+
+    <script src="https://jwpsrv.com/library/FfMxTl3oEeSEiiIACxmInQ.js"></script>   
+    <div id="si">Cargando...</div>
+    <script type="text/javascript">
+    var playerInstance1 = jwplayer("si");
+    playerInstance1.setup({
+     "file": "https://cdn3.wowza.com/2/QUlIbDBYVzJGOTJR/UEdmL3Fs/hls/vpphfnyd/playlist.m3u8",
+     "width":"1510",
+     "height":"720",
+     stretching: "bestfit",
+     "image": "#",
+     "mediaid": "player",
+     "mute": false,
+     "autostart": false,
+         "cast": {
+             "appid": "player",
+             "logo": "https://i.ibb.co/Tgk2YrC/Logo.png",
+         },
+    });
+ </script>
+
     </body>
 </html>

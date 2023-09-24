@@ -1,33 +1,13 @@
 const express = require('express');
 const app = express();
-const fs = require('fs');
-const http = require('http');
-const host = '127.0.0.1';
-const port = 3000;
+const path = require('path');
 
-const server = http.createServer((req, res) => {
+app.use(express.static('public'));
 
-    res.writeHead(200, { 'Content-Type': 'text/html' });
-
-    fs.readFile('public/index.html', (err, data) => {
-    
-        if (err) {
-        
-            res.writeHead(404);
-            res.write('File not found!');
-        
-        } else {
-        
-            res.write(data);
-        
-        }
-
-        res.end();
-
-    });
-
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-server.listen(port, host, () => {
-    console.log(`Server running at http://${host}:${port}/`);
+app.listen(3000, () => {
+    console.log('Servidor creado en el puerto 3000');
 });
